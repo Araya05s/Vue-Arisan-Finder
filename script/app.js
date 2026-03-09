@@ -6,7 +6,7 @@ const app = Vue.createApp({
             names: [],
             error: '',
             showError: false,
-            result: 'Mira'
+            result: ''
         }
     },
     computed: {
@@ -52,13 +52,21 @@ const app = Vue.createApp({
         },
         getResult() {
             let randName = this.getRandomName();
+            if (this.result !=='') {
+                while (randName == this.result){
+                    randName = this.getRandomName();
+
+                }
+            }
             this.result = randName;
         },
         backToHome() {
             this.state = true;
             this.names = [];
             this.inputName = '';
-            this.error = ';'
+            this.error = ';';
+            this.showError = false;
+            this.showResult = false;
         }
     },
 }).mount("#app")
