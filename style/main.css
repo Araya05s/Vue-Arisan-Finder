@@ -1,5 +1,5 @@
 body {
-    background-color: #221122;
+    background: linear-gradient(90deg, #FDBB2D 0%, #3A1C71 100%);    
     color:azure;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
