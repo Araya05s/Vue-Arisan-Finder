@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <link rel="stylesheet" href="/style/main.css">
+    <title>Who can get Arisan?</title>
+</head>
+<body>
+    <div id="app">
+        <div v-if="state" class="container">
+            <div>
+                <h1>Who can get Arisan?</h1>
+            </div>
+            <div class="form">
+                <label for="input_name">Add the names first!</label>
+                <div class="text-area">
+                    <input type="text" name="input_name" v-model.trim="inputName"/>
+                    <button @click="addNameToList" class="button">Add</button>
+                </div>
+            </div>
+            <div v-if="showError">
+                {{ error }}
+            </div>
+            <div class="names-list">
+                <div v-for="(name, index) in names" :key="name" @click="removeName(index)" class="names">
+                    {{ name }}
+                </div>
+            </div>
+            <div>
+                <button v-if="isReady" @click="showResult" class="button">Check the winner</button>
+            </div>
+        </div>
+        <div id="result" v-if="!state" class="container">
+            <h2>
+                Here's the result!
+            </h2>
+                
+            <div class="result">
+                -- {{ result }} --
+            </div>
+            <div class="finish-button">
+                <button @click="backToHome" class="button">Create New Names!</button>
+                <button @click="getResult" class="button">FInd Again!</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="/script/app.js"></script>
+</html>

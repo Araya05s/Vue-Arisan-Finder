@@ -1,0 +1,96 @@
+body {
+    background-color: #221122;
+    color:azure;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#app {
+    display: flex;
+    min-height: 100dvh;
+    justify-content: center;
+    align-items: center;  
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4px 16px;
+    padding-bottom: 16px;
+    margin: 2px 8px;
+    border-radius: 4px;
+    box-shadow: 6px 8px 2px #552753;
+    background-color: #853953;  
+}
+
+.form {
+    color: aliceblue;
+}
+
+.form label {
+    opacity: 80%;
+    font-style: italic;
+    font-display: fallback;
+}
+
+.text-area {
+    display: flex;
+    padding: 12px 0px;
+}
+
+.text-area input {
+    padding: 4px;
+    margin-right: 8px;
+    outline-style: none;
+}
+
+.button {
+    padding: 4px 6px;
+    font-weight: 700;
+    border-style: none;
+    outline-style: none;
+    background-color: white;
+    border-radius: 4px;
+}
+
+.names-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 08px 0px;
+    max-width: 450px;
+}
+
+.names {
+    padding: 4px 6px;
+    font-weight: 600;
+    border-style: none;
+    background-color: #552753;
+    border-radius: 4px;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+.finish-button {
+    padding-top: 2px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 250px;
+}
+
+.finish-button button {
+    width: 100px;
+}
+
+#result h2 {
+    margin-bottom: 12px;
+    text-decoration: underline;
+}
+
+.result {
+    font-weight: 800;
+    font-size: xx-large;
+    padding: 10px;
+}
