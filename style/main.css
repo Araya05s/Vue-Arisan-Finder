@@ -75,22 +75,36 @@ body {
 .finish-button {
     padding-top: 2px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
+    align-items: center;
     width: 250px;
 }
 
 .finish-button button {
-    width: 100px;
+    width: 250px;
+    padding: 8px 0px;
+    margin: 8px 0px;
 }
 
 #result h2 {
-    margin-bottom: 12px;
-    text-decoration: underline;
+    font-size: medium;
+    margin-bottom: 4px;
+    color: #d2b9c3;
 }
 
 .result {
     font-weight: 800;
     font-size: xx-large;
     padding: 10px;
+}
+
+#add {
+    background-color: #e080a1;
+    color: #221122;
+    padding: 8px 16px;
+}
+
+#check {
+    padding: 8px 16px;
 }

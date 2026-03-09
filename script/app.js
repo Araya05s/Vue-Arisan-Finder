@@ -1,7 +1,7 @@
 const app = Vue.createApp({
     data() {
         return {
-            state: false,
+            state: true,
             inputName: '',
             names: [],
             error: '',

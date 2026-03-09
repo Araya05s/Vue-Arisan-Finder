@@ -18,7 +18,7 @@
                 <label for="input_name">Add the names first!</label>
                 <div class="text-area">
                     <input type="text" name="input_name" v-model.trim="inputName"/>
-                    <button @click="addNameToList" class="button">Add</button>
+                    <button @click="addNameToList" class="button" id="add">Add</button>
                 </div>
             </div>
             <div v-if="showError">
@@ -30,16 +30,16 @@
                 </div>
             </div>
             <div>
-                <button v-if="isReady" @click="showResult" class="button">Check the winner</button>
+                <button v-if="isReady" @click="showResult" class="button" id="check">Check the winner</button>
             </div>
         </div>
         <div id="result" v-if="!state" class="container">
             <h2>
-                Here's the result!
+                The winner is...
             </h2>
                 
             <div class="result">
-                -- {{ result }} --
+                &#10024 {{ result }} &#10024
             </div>
             <div class="finish-button">
                 <button @click="backToHome" class="button">Create New Names!</button>
